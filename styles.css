@@ -1,0 +1,114 @@
+/* Global styles */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f4f4f4;
+}
+
+header {
+    text-align: center;
+    background-color: #1E3A8A; /* Dark Blue */
+    color: white;
+    padding: 20px;
+}
+
+h1 {
+    font-size: 2.5em;
+}
+
+section {
+    text-align: center;
+    margin: 20px 0;
+}
+
+/* Image container */
+.image-container {
+    position: relative;
+    width: 150px;
+    height: 150px;
+    margin: 20px auto;
+}
+
+/* Default Circle Image */
+.circle-image {
+    width: 100%;
+    height: 100%;
+    border-radius: 50%; /* Circle shape */
+    position: absolute;
+    top: 0;
+    left: 0;
+    transition: opacity 0.3s ease-in-out;
+}
+
+/* Triangle Image */
+.triangle-image {
+    width: 100%;
+    height: 100%;
+    clip-path: polygon(50% 0%, 0% 100%, 100% 100%); /* Triangle shape */
+    position: absolute;
+    top: 0;
+    left: 0;
+    opacity: 0; /* Initially hidden */
+    transition: opacity 0.3s ease-in-out;
+}
+
+/* On hover, hide the circle and show the triangle */
+.image-container:hover .circle-image {
+    opacity: 0; /* Hide circle image */
+}
+
+.image-container:hover .triangle-image {
+    opacity: 1; /* Show triangle image */
+}
+
+/* Button styles */
+button {
+    padding: 10px 20px;
+    font-size: 16px;
+    cursor: pointer;
+    border: none;
+    border-radius: 5px;
+    background-color: #4FD1C5; /* Bright Teal */
+    color: white;
+    transition: background-color 0.3s ease;
+}
+
+/* Hover effect: Change button color */
+button:hover {
+    background-color: #6B46C1; /* Deep Purple */
+    opacity: 0.9;
+}
+
+/* Input field */
+input[type="text"] {
+    padding: 8px;
+    font-size: 16px;
+    border-radius: 5px;
+    border: 1px solid #5A67D8; /* Light Blue border */
+    margin-bottom: 10px;
+}
+
+/* Footer */
+footer {
+    text-align: center;
+    background-color: #333;
+    color: white;
+    padding: 10px;
+}
+
+/* Responsive design */
+@media (max-width: 600px) {
+    .image-container {
+        width: 100px;
+        height: 100px;
+    }
+
+    header h1 {
+        font-size: 2em;
+    }
+
+    button {
+        padding: 8px 16px;
+    }
+}
